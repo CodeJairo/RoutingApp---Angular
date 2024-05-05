@@ -7,6 +7,9 @@ import { Country } from '../../interfaces/country';
   templateUrl: './by-capital-page.component.html',
 })
 export class ByCapitalPageComponent {
+
+
+
   public countries: Country[] = [];
 
   constructor(private countriesService: CountriesService) { }
@@ -16,4 +19,10 @@ export class ByCapitalPageComponent {
       this.countries = countries;
     });
   }
+
+
+
+
+
+
 }
