@@ -11,10 +11,14 @@ export class CountriesService {
 
   constructor(private http: HttpClient) {}
 
+  // public randomDelay = () => {
+  //   return [500, 1000, 2000][Math.floor(Math.random() * 3)];
+  // };
+
   private getCountriesRequest(url: string): Observable<Country[]> {
     return this.http.get<Country[]>(url).pipe(
-      catchError(() => of([])),
-      delay(2000)
+      catchError(() => of([]))
+      // delay(300)
     );
   }
 
